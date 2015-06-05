@@ -4,7 +4,6 @@
   "description": "Generated via React App",
   "main": "src/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack -p --config webpack.dist.config.js",
     "start": "./node_modules/.bin/webpack-dev-server",
     "test": "./node_modules/.bin/jest .test.js"
   },

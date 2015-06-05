@@ -1,0 +1,22 @@
+{
+  "name": "generator-react-app",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "app",
+    "action",
+    "component",
+    "mixin",
+    "store",
+    "view"
+  ],
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "yeoman-generator": "^0.20.1"
+  }
+}

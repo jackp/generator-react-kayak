@@ -1,0 +1,43 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jasmine": true
+  },
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true,
+    "spread": true
+  },
+  "globals": {
+    "jest": true
+  },
+  "rules": {
+    "strict": 0,
+    "default-case": true,
+    "eqeqeq": true,
+    "indent": [2, 2],
+    "new-cap": 0,
+    "no-unused-vars": [1, { vars: "all", args: "after-used"}],
+    "no-multiple-empty-lines": true,
+    "react/jsx-boolean-value": 1,
+    "react/jsx-quotes": [1, "double"],
+    "react/jsx-no-undef": 1,
+    "react/jsx-sort-props": 0,
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-unknown-property": 1,
+    "react/prop-types": [1, { ignore: ["children", "className", "params"] }],
+    "react/react-in-jsx-scope": 1,
+    "react/self-closing-comp": 1,
+    "react/wrap-multilines": 1
+  }
+}

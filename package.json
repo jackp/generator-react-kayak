@@ -1,7 +1,7 @@
 {
-  "name": "generator-react-app",
+  "name": "generator-react-kayak",
   "version": "0.0.1",
-  "description": "",
+  "description": "React application generator",
   "files": [
     "app",
     "action",
@@ -10,8 +10,9 @@
     "store",
     "view"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Jack Parker <parkej3@gmail.com>",
+  "repository": "git@github.com:jackp/generator-react-kayak.git",
+  "license": "MIT",
   "keywords": [
     "yeoman-generator"
   ],

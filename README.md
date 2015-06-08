@@ -1,4 +1,7 @@
-# generator-react-app
+# generator-react-kayak
+
+> Navigating you quickly, but safely, down the rapids of React and Javascript development
+
 React application generator
 
 Combines the following technologies into a React application:
@@ -12,11 +15,11 @@ Combines the following technologies into a React application:
 
 ## Get Started
 - Install `generator-react-app`:
-  - `npm install -g generator-react-app`
+  - `npm install -g generator-react-kayak`
 - Create your application folder:
   - `mkdir ~/Projects/MyApp && cd ~/Projects/MyApp`
 - Generate your React App
-  - `yo react-app`
+  - `yo react-kayak`
 - `npm start` and enjoy!
 
 ## Additional commands

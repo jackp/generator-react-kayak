@@ -39,7 +39,7 @@
 
 ## Additional commands
 - `npm test` - Run Jest test suite
-- `gulp build` - Create distribution bundle in `/dist` (If gulp not installed, `npm install -g gulp`
-- `gulp preview` - Create a server running the distribution bundle`
+- `gulp build` - Create distribution bundle in `/dist`
+- `gulp preview` - Create a server running the distribution bundle
 
 ## Contributing

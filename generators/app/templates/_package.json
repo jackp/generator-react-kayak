@@ -1,7 +1,7 @@
 {
   "name": "<%= appname %>",
   "version": "0.0.1",
-  "description": "Generated via React App",
+  "description": "Generated via React Kayak",
   "main": "src/index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",

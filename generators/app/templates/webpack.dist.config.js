@@ -18,8 +18,8 @@ module.exports = {
     publicPath: "/assets/",
     filename: "main.js"
   },
-  // Loaders, other configuration regarding
-  // modules themselves
+
+  // Loaders
   module: {
     loaders: [
       {

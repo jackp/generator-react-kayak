@@ -15,8 +15,8 @@ module.exports = {
     publicPath: "/assets/",
     filename: "main.js"
   },
-  // Loaders, other configuration regarding
-  // modules themselves
+
+  // Loaders
   module: {
     loaders: [
       {
@@ -25,15 +25,11 @@ module.exports = {
         loader: "react-hot!babel"
       },
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         loader: "style!" +
                 "css!" +
                 "autoprefixer?{browsers:" + JSON.stringify(AUTOPREFIXER_BROWSERS) + "}!" +
                 "sass?outputStyle=expanded"
-      },
-      {
-        test: /\.css$/,
-        loader: "style!css!autoprefixer?{browsers:" + JSON.stringify(AUTOPREFIXER_BROWSERS) + "}!"
       },
       {
         test: /\.(gif|png|jpg|svg|eot|woff2|ttf|woff)(\?|$)/,

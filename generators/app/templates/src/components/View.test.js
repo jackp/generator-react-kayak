@@ -7,7 +7,7 @@ describe("View", function() {
   var View = require("./View");
 
   it("is defined as a React component", function() {
-    var component = <View />;
+    var component = <View name="test" title="Test" />;
 
     expect(TestUtils.isElement(component)).toBeTruthy();
   });

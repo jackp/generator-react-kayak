@@ -5,17 +5,15 @@ var copyConfig = require("./copyConfig");
 var writeTemplates = require("./writeTemplates");
 
 module.exports = generators.Base.extend({
-  initializing: {
-
-  },
+  initializing: {},
   prompting: getApplicationOptions,
   configuring: copyConfig,
   writing: writeTemplates,
-  install: function() {
-    this.log("Installing NPM dependencies...");
-    this.npmInstall();
+  install: {
+    npm: function() {
+      this.log("Installing NPM dependencies...");
+      this.npmInstall();
+    }
   },
-  end: {
-
-  }
+  end: {}
 });

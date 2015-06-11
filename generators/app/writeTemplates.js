@@ -2,40 +2,24 @@
  * Write templates
  */
 module.exports = {
-  writePackageJSON: function() {
+  copyIndexFiles: function() {
     this.fs.copyTpl(
-      this.templatePath("package.json"),
-      this.destinationPath("package.json"),
-      { appname: this.appname }
-    );
-  },
-  writeIndexHTML: function() {
-    this.fs.copyTpl(
-      this.templatePath("index.html"),
+      this.templatePath("src/index.html"),
       this.destinationPath("src/index.html"),
-      { title: this.appname + ": React App" }
+      { title: this.appname + ": React Kayak" }
     );
-  },
-  copyIndexJS: function() {
+
     this.fs.copy(
-      this.templatePath("index.js"),
+      this.templatePath("src/index.js"),
       this.destinationPath("src/index.js")
     );
   },
-  copyActions: function() {
-    this.directory("actions", this.destinationPath("src/actions"));
-  },
-  copyAssets: function() {
-    this.directory("assets", this.destinationPath("src/assets"));
-  },
-  copyComponents: function() {
-    // These will likely be broken out into templates
-    this.directory("components", this.destinationPath("src/components"));
-  },
-  copyMixins: function() {
-    this.directory("mixins", this.destinationPath("src/mixins"));
-  },
-  copyStores: function() {
-    this.directory("stores", this.destinationPath("src/stores"));
+  copyStaticFiles: function() {
+    this.directory("src/actions", this.destinationPath("src/actions"));
+    this.directory("src/assets", this.destinationPath("src/assets"));
+    this.directory("src/components", this.destinationPath("src/components"));
+    this.directory("src/mixins", this.destinationPath("src/mixins"));
+    this.directory("src/stores", this.destinationPath("src/stores"));
+    this.directory("src/styles", this.destinationPath("src/styles"));
   }
 };

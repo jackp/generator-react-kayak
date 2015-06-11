@@ -5,13 +5,13 @@
 
 import React from "react";
 import { RouteHandler } from "react-router";
-import { Styles } from "material-ui";
-
+<% if (options.styleFramework === "material") { %>import { Styles } from "material-ui";
+<% } %>
 import Header from "components/header";
 import Sidebar from "components/sidebar";
 
-require("normalize.css/normalize.css");
-require("materialize-css/bin/materialize.css");
+require("normalize.css/normalize.css");<% if (options.styleFramework === "material") { %>
+require("materialize-css/bin/materialize.css");<% } %>
 require("styles/main.scss");
 
 const App = React.createClass({
@@ -25,7 +25,7 @@ const App = React.createClass({
         </main>
       </div>
     );
-  },
+  }<% if (options.styleFramework === "material") { %>,
   childContextTypes: {
     muiTheme: React.PropTypes.object
   },
@@ -33,7 +33,7 @@ const App = React.createClass({
     return {
       muiTheme: new Styles.ThemeManager().getCurrentTheme()
     };
-  }
+  }<% } %>
 });
 
 export default App;

@@ -58,7 +58,6 @@ const Sidebar = React.createClass({
       this.refs.sidebarNotice.show();
     }
   }
-
 });
 
 export default Sidebar;

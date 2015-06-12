@@ -23,6 +23,7 @@
     "eqeqeq": true,
     "indent": [2, 2],
     "new-cap": 0,
+    "no-underscore-dangle": 0,
     "no-unused-vars": [1, { vars: "all", args: "after-used"}],
     "no-multiple-empty-lines": true,
     "react/jsx-boolean-value": 1,

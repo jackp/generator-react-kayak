@@ -8,6 +8,7 @@ module.exports = {
     this.fs.copy(this.templatePath("README.md"), this.destinationPath("README.md"));
     this.fs.copy(this.templatePath("webpack.config.js"), this.destinationPath("webpack.config.js"));
     this.fs.copy(this.templatePath("webpack.dist.config.js"), this.destinationPath("webpack.dist.config.js"));
+    this.fs.copy(this.templatePath("jest-preprocessor.js"), this.destinationPath("jest-preprocessor.js"));
   },
   copyGulpTasks: function() {
     this.directory("tasks", this.destinationPath("tasks"));

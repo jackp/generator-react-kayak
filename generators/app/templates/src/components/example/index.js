@@ -9,6 +9,7 @@ import Reflux from "reflux";
 import { Table, Column } from "fixed-data-table";
 
 import View from "components/View";
+import exampleActions from "actions/exampleActions";
 import satScoreStore from "stores/exampleSatScoreStore";
 
 require("fixed-data-table/dist/fixed-data-table.css");
@@ -19,6 +20,9 @@ const ExampleView = React.createClass({
     return {
       satScores: []
     };
+  },
+  componentWillMount() {
+    exampleActions.getSATScores();
   },
   _rowGetter(index) {
     return this.state.satScores[index];

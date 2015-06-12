@@ -7,12 +7,13 @@ import Reflux from "reflux";
 import request from "superagent";
 import _ from "lodash";
 
+import exampleActions from "actions/exampleActions";
+
 const satScoreStore = Reflux.createStore({
+  // Listen to all uiActions
+  listenables: exampleActions,
   apiUrl: "https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.json",
-  init() {
-    this.getSATData();
-  },
-  getSATData: function() {
+  onGetSATScores: function() {
     request
     .get(this.apiUrl)
     .end((err, res) => {
@@ -20,11 +21,11 @@ const satScoreStore = Reflux.createStore({
         // TODO: Better error handling pattern
         console.log(err);
       } else {
-        this.trigger(this.parseSATData(res.body));
+        this.trigger(this._parseSATData(res.body));
       }
     });
   },
-  parseSATData(responseData) {
+  _parseSATData(responseData) {
     // Let's get that data in a useable form
     let parsedData = [];
     let columns = responseData.meta.view.columns;

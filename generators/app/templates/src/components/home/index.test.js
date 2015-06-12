@@ -1,6 +1,6 @@
 jest.dontMock("../home");
 
-describe("Sidebar", function() {
+describe("HomeView", function() {
   var React = require("react/addons");
   var TestUtils = React.addons.TestUtils;
 

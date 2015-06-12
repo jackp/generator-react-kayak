@@ -9,14 +9,14 @@ import Router, { Route, DefaultRoute, NotFoundRoute } from "react-router";
 <% } %>
 import App from "components/App";
 import HomeView from "components/home";
-import Error404View from "components/errors/404";
-import ExampleView from "components/example";
+import Error404View from "components/errors/404";<% if (options.showExamples) { %>
+import ExampleView from "components/example";<% } %>
 
 // Route definitions
 const routes = (
   <Route handler={App} path="/">
-    <DefaultRoute handler={HomeView} name="home" />
-    <Route handler={ExampleView} name="example" path="/example" />
+    <DefaultRoute handler={HomeView} name="home" /><% if (options.showExamples) { %>
+    <Route handler={ExampleView} name="example" path="/example" /><% } %>
     <NotFoundRoute handler={Error404View} />
   </Route>
 );

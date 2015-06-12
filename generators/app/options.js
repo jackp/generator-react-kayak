@@ -22,6 +22,16 @@ module.exports = function() {
         "None"
       ],
       default: "material"
+    },
+    {
+      type: "list",
+      name: "showExamples",
+      message: "Would you like to include example components in your app or have a barebones boilerplate?",
+      choices: [
+        { name: "Yes, provide me with some examples", value: true },
+        { name: "No, barebones please", value: false }
+      ],
+      default: true
     }
   ], function(answers) {
     this.appname = _.capitalize(_.camelCase(answers.name));

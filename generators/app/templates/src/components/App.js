@@ -6,9 +6,9 @@
 import React from "react";
 import { RouteHandler } from "react-router";
 <% if (options.styleFramework === "material") { %>import { Styles } from "material-ui";
-<% } %>
+<% } %><% if (options.showExamples) { %>
 import Header from "components/header";
-import Sidebar from "components/sidebar";
+import Sidebar from "components/sidebar";<% } %>
 
 require("normalize.css/normalize.css");<% if (options.styleFramework === "material") { %>
 require("materialize-css/bin/materialize.css");<% } %>
@@ -17,9 +17,9 @@ require("styles/main.scss");
 const App = React.createClass({
   render() {
     return (
-      <div>
+      <div><% if (options.showExamples) { %>
         <Header />
-        <Sidebar />
+        <Sidebar /><% } %>
         <main>
           <RouteHandler {...this.props} />
         </main>

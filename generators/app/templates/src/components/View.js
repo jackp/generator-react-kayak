@@ -14,7 +14,7 @@ const View = React.createClass({
   },
   render() {
     return (
-      <DocumentTitle title={this.props.title}>
+      <DocumentTitle title={`${this.props.title} | <%= appname %>`}>
         <section id={this.props.name}>{this.props.children}</section>
       </DocumentTitle>
     );

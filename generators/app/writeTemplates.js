@@ -8,7 +8,7 @@ module.exports = {
     this.fs.copyTpl(
       this.templatePath("src/index.html"),
       this.destinationPath("src/index.html"),
-      { title: this.appname + ": React Kayak" }
+      { title: "React Kayak | " + this.appname }
     );
 
     this.fs.copyTpl(
@@ -30,6 +30,17 @@ module.exports = {
       this.destinationPath("src/components/App.test.js")
     );
   },
+  copyViewComponent: function() {
+    this.fs.copyTpl(
+      this.templatePath("src/components/View.js"),
+      this.destinationPath("src/components/View.js"),
+      { appname: this.appname }
+    );
+    this.fs.copy(
+      this.templatePath("src/components/View.test.js"),
+      this.destinationPath("src/components/View.test.js")
+    );
+  },
   copyHomeViewComponent: function() {
     this.fs.copyTpl(
       this.templatePath("src/components/home/index.js"),
@@ -49,15 +60,6 @@ module.exports = {
     this.directory("src/components/errors", this.destinationPath("src/components/errors"));
     this.directory("src/components/shared", this.destinationPath("src/components/shared"));
     this.directory("src/styles", this.destinationPath("src/styles"));
-
-    this.fs.copy(
-      this.templatePath("src/components/View.js"),
-      this.destinationPath("src/components/View.js")
-    );
-    this.fs.copy(
-      this.templatePath("src/components/View.test.js"),
-      this.destinationPath("src/components/View.test.js")
-    );
 
     // Create empty folders for structure
     mkdirp.sync(this.destinationPath("src/assets"));

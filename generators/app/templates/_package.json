@@ -47,7 +47,7 @@
     "reflux": "^0.2.7"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "scriptPreprocessor": "<rootDir>/jest-preprocessor.js",
     "testDirectoryName": "src",
     "testPathIgnorePatterns": [
       "node_modules"
